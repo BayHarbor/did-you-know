@@ -6,7 +6,7 @@ const factEl = document.getElementById("fact");
 async function getEvent(path) {
     const resp = await fetch(`http://numbersapi.com/${path}`);
     const respData = await resp.text();
-    console.log(respData);
+
     factEl.innerText = respData;
 }
 
@@ -42,4 +42,3 @@ randomFactEl.addEventListener("click", getRandomEvent);
 numberFactEl.addEventListener("click", getNumberFact);
 
 getTodaysEvent(); // On page load, grab an event from today.
-// getRandomEvent();  // Add listener for a random button.
